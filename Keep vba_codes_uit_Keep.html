@@ -1,0 +1,2126 @@
+<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}
+table td,table th{padding:0}
+.c4{-webkit-text-decoration-skip:none;color:#0000ee;font-weight:400;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:11pt;font-family:"Arial";font-style:normal}
+.c2{line-height:1.5;color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;white-space: pre-wrap;font-size:11pt;font-family:"Arial";font-style:normal}
+.c3{color:#006400;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Arial";font-style:normal}
+.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left;height:11pt}
+.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c5{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;color:#0000ee;text-decoration:underline}
+.c7{background-color:#ffffff;max-width:800pt;padding:10pt 72pt 72pt 72pt}
+.c6{color:inherit;text-decoration:inherit}
+.c8{font-weight:700}
+.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Arial";line-height:1.0;page-break-after:avoid;text-align:left}
+.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.0;page-break-after:avoid;font-style:italic;text-align:left}
+li{color:#000000;font-size:11pt;font-family:"Arial"}
+p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}
+h1{padding-top:12pt;color:#000000;font-weight:700;font-size:24pt;padding-bottom:12pt;font-family:"Arial";line-height:1.0;text-align:left}
+h2{padding-top:11.2pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:11.2pt;font-family:"Arial";line-height:1.0;text-align:left}
+h3{padding-top:12pt;color:#000000;font-weight:700;font-size:14pt;padding-bottom:12pt;font-family:"Arial";line-height:1.0;text-align:left}
+h4{padding-top:12.8pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:12.8pt;font-family:"Arial";line-height:1.0;text-align:left}
+h5{padding-top:12.8pt;color:#000000;font-weight:700;font-size:9pt;padding-bottom:12.8pt;font-family:"Arial";line-height:1.0;text-align:left}
+h6{padding-top:18pt;color:#000000;font-weight:700;font-size:8pt;padding-bottom:18pt;font-family:"Arial";line-height:1.0;text-align:left}
+
+.inh{font-size:1.2rem; color:RGB(0, 0, 255);padding-bottom:12pt;}
+
+a{color:blue}
+
+</style></head>
+<body class="c7">
+<h1>Keep notes - label VBA</h1>
+<p class="c1"><span class="c2" style="font-size:18px; color:RGB(255, 0, 0);">Laatste aanpassing: 8 januari 2019</span></p>
+<br>
+<hr>
+
+<p class="inh"><a href="#1">Automate Copy Paste Data in Non Adjacent Cells in Sheet1 to Sheet2</a></p>
+<p class="inh"><a href="#2">Sorteren-1</a></p>
+<p class="inh"><a href="#2a">Sorteren-2</a></p>
+<p class="inh"><a href="#3">Check if a certain (pdf) file is open and close it</a></p>
+<p class="inh"><a href="#4">Excel VBA: Writing data to a CLOSED WORKBOOK [Without making it wisible]</a></p>
+<p class="inh"><a href="#5">Reset UsedRange</a></p>
+<p class="inh"><a href="#6">Laatste rij in kolom, LastRow</a></p>
+<p class="inh"><a href="#7">Opening an HTML Page in a Macro</a></p>
+<p class="inh"><a href="#8">VBA tips</a></p>
+<p class="inh"><a href="#9">VBA code to center userform</a></p>
+<p class="inh"><a href="#10">Excel alle bladen zichtbaar maken</a></p>
+<p class="inh"><a href="#11">Check if a Workbook is Open</a></p>
+<p class="inh"><a href="#12">open URL with Google Chrome</a></p>
+<p class="inh"><a href="#13">How to find numbers from a string?</a></p>
+<p class="inh"><a href="#14">CleanString function</a></p>
+<p class="inh"><a href="#15">Filter uitzetten / Turn Off auto filter</a></p>
+<p class="inh"><a href="#16">Current directory</a></p>
+<p class="inh"><a href="#17">Filter alles zichtbaar of filter alleen selectie</a></p>
+<p class="inh"><a href="#18">vbYesNo default No</a></p>
+<p class="inh"><a href="#19">Bevestiging vragen-1 simpel</a></p>
+<p class="inh"><a href="#20">Inputbox with defaultvalue</a></p>
+<p class="inh"><a href="#21">New Line in VBA Excel Nieuwe regel</a></p>
+<p class="inh"><a href="#22">Selecteer de eerste cel in actieve rij</a></p>
+<p class="inh"><a href="#23">TechOnTheNet MS Excel Macros/VBA</a></p>
+<p class="inh"><a href="#24">Bevestiging vragen-2 uitgebreid</a></p>
+<p class="inh"><a href="#25">How to clear the Debug Window (Immediate Window) in VBA</a></p>
+<p class="inh"><a href="#26">Is there any difference between vbNullString and &ldquo;&rdquo;?</a></p>
+<p class="inh"><a href="#27">Check if Clipboard is Empty</a></p>
+<p class="inh"><a href="#28">Filters alles zichtbaar Show All Records</a></p>
+<p class="inh"><a href="#29">Case statement, Select Case, Case Is, Case Else</a></p>
+<p class="inh"><a href="#30">Save as dialog</a></p>
+<p class="inh"><a href="#31">Check if folder exists En Check of file exists</a></p>
+<p class="inh"><a href="#32">Print en PrintPreview</a></p>
+<p class="inh"><a href="#33">Een rij onder de active rij invoegen met dezelfde opmaak</a></p>
+
+<p class="inh"><a href="#35">Selecteer bereik tussen actieve cel en laatste cel in de kolom</a></p>
+<p class="inh"><a href="#36">Zoeken in kolom</a></p>
+<p class="inh"><a href="#37">VBA code to copy and paste excelsheet into a text file, save and close</a></p>
+<p class="inh"><a href="#38">Embedding strings containing double quotes in VBA code</a></p>
+
+<p class="inh"><a href="#40">Dialoogvenster voor importeren toetsbladen</a></p>
+<p class="inh"><a href="#41">VBA to unselect a selected range. Removing Cells from a Selected Range</a></p>
+<p class="inh"><a href="#42">Excel cell locked after paste - 1</a></p>
+<p class="inh"><a href="#43">Excel AutoFilter With Criteria in a Range</a></p>
+<p class="inh"><a href="#44">Find dublicates in column (2)</a></p>
+<p class="inh"><a href="#45">Find dublicates in column (1)</a></p>
+<p class="inh"><a href="#46">Scroll to active row or column</a></p>
+<p class="inh"><a href="#47">VBA Zoom to Selection, inzoomen op selectie</a></p>
+<p class="inh"><a href="#48">For each cel in DoelRange waarde gelijk aan BronRange</a></p>
+<p class="inh"><a href="#49">Select range</a></p>
+<p class="inh"><a href="#50">Save file in temporary windows folder, Windows Temp folder</a></p>
+<p class="inh"><a href="#51">VBA to tell if file is READ ONLY</a></p>
+<p class="inh"><a href="#52">Outlook VBA - Move items based on subject to another folder</a></p>
+<p class="inh"><a href="#53">Outlook VBA move email to different folder</a></p>
+<p class="inh"><a href="#54">Outlook VBA - Copy email to the clipboard with Outlook VBA - Stack Overflow</a></p>
+<p class="inh"><a href="#55">Outlook VBA - Tips: Using VBA to Manage Your Outlook Email Attachments</a></p>
+<p class="inh"><a href="#56">Save a workbook with an incrementing Version Number</a></p>
+<p class="inh"><a href="#57">Run Excel Macro Without Opening Excel - </a></p>
+<p class="inh"><a href="#58">3 Ways to Call a Private Sub from Another Module - </a></p>
+<p class="inh"><a href="#59">IfError in VlookUp formula</a></p>
+<p class="inh"><a href="Why INDEX-MATCH Is Far Better Than VLOOKUP.htm">Why INDEX-MATCH Is Far Better Than VLOOKUP</a></p>
+<p class="inh"><a href="#60">Alternative for multiple or conditions</a></p>
+<p class="inh"><a href="#61">Mozard documentenlijst als html opslaan</a></p>
+<p class="inh"><a href="#62">Using named range in VBA function for VLOOKUP</a></p>
+<p class="inh"><a href="#63">Aan textboxen macros toekennen</a></p>
+<p class="inh"><a href="#64">Remove all macro's</a></p>
+<p class="inh"><a href="#65">EXCEL - Werkmap beveiligen, tabbladen beveiligen</a></p>
+<p class="inh"><a href="#66">EXCEL - Background Colors</a></p>
+<p class="inh"><a href="#67">EXCEL - How to create strings containing double quotes in Excel formulas?</a></p>
+<p class="inh"><a href="#68">EXCEL - zoeken "identieke cellinhoud" wordt ingeschakeld</a></p>
+<p class="inh"><a href="#69">EXCEL - cell locked after paste - 2</a></p>
+<p class="inh"><a href="#70">EXCEL - alle bladen zichtbaar maken</a></p>
+
+
+<br>
+<hr>
+
+<!-- ------------------------------------------ -->
+
+<p class="c1"><span class="c3"><a id ="1">Automate Copy Paste Data in Non Adjacent Cells in Sheet1 to Sheet2</a></span></p>
+<p class="c0"><span class="c3"></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Private Sub Copy_Paste_Data_in_NonAdjacentCells()</span></p>	
+<p class="c1"><span class="c2">&#39;Automate Copy Paste Data in Non Adjacent Cells in Sheet1 to Sheet2</span></p>	
+<p class="c1"><span class="c2">Dim bronBlok As Range, doelBlok As Range</span></p>	
+<p class="c1"><span class="c2">Dim myRij As Integer, myKolom As Integer</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Set bronBlok = Sheets(&quot;Blad1&quot;).Range(&quot;D5:D8,G5:H5,J7:J9,E13:I13&quot;)</span></p>	
+<p class="c1"><span class="c2">Set doelBlok = Sheets(&quot;Blad2&quot;).Range(&quot;D5:D8,G5:H5,J7:J9,E13:I13&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">For Each cel In bronBlok</span></p>	
+<p class="c1"><span class="c2">&#39;cel.Select</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">myRij = cel.Row</span></p>	
+<p class="c1"><span class="c2">myKolom = cel.Column</span></p>	
+<p class="c1"><span class="c2">cel.Copy Sheets(&quot;Blad2&quot;).Cells(myRij, myKolom)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Cells(myRij, myKolom).Select</span></p>	
+<p class="c1"><span class="c2">&#39;Cells(myRij, myKolom).PasteSpecial xlPasteValues</span></p>	
+<p class="c1"><span class="c2">Next</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Private Sub Copy_VD_van_werkbladA_naar_werkbladB()</span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c1"><span class="c2">Dim w1 As Workbook, w2 As Workbook</span></p>	
+<p class="c1"><span class="c2">Dim s1 As Worksheet, s2 As Worksheet</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim bronBlok As Range</span></p>	
+<p class="c1"><span class="c2">Dim myRij As Integer, myKolom As Integer</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Set w1 = Workbooks(&quot;Toetsdossier - OLO-2912723OUD.xlsm&quot;)</span></p>	
+<p class="c1"><span class="c2">Set w2 = Workbooks(&quot;Toetsdossier OLO-YYYY versie 2.15 Concept.xlsm&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Set s1 = w1.Sheets(&quot;Verificatiedossier&quot;)</span></p>	
+<p class="c1"><span class="c2">Set s2 = w2.Sheets(&quot;Verificatiedossier&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Set bronBlok = s1.Range(&quot;B6:G75&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">For Each cel In bronBlok</span></p>	
+<p class="c1"><span class="c2">myRij = cel.Row</span></p>	
+<p class="c1"><span class="c2">myKolom = cel.Column</span></p>	
+<p class="c1"><span class="c2">If s2.Cells(myRij, myKolom).Locked = False Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;cel.Copy s2.Cells(myRij, myKolom)</span></p>	
+<p class="c1"><span class="c2">&#39; Else: MsgBox &quot;Cell is locked&quot;</span></p>	
+<p class="c1"><span class="c2">End If</span></p>	
+<p class="c1"><span class="c2">Next</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="2"><a id ="B">Sorteren-1</a></a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub TT_SorteerWeekstaat()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim wp As Worksheet</span></p>	
+<p class="c1"><span class="c2">Dim lastrow As Integer</span></p>	
+<p class="c1"><span class="c2">Set wp = ActiveSheet</span></p>	
+<p class="c1"><span class="c2">lastrow = wp.Range(&quot;A25&quot;).End(xlUp).Row</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">ActiveSheet.Sort.SortFields.Clear</span></p>	
+<p class="c1"><span class="c2">With wp</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;.Sort.SortFields.Add Key:=Range(&quot;A9:A&quot; &amp; lastrow), SortOn:=xlSortOnValues, Order:=xlDescending, DataOption:=xlSortNormal</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;.Sort.SortFields.Add Key:=Range(&quot;D9:D&quot; &amp; lastrow), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:=xlSortNormal</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;With .Sort</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.SetRange Range(&quot;A8:M&quot; &amp; lastrow)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Header = xlYes</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.MatchCase = False</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Orientation = xlTopToBottom</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.SortMethod = xlPinYin</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Apply</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End With</span></p>	
+<p class="c1"><span class="c2">End With</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="2a">Sorteren-2</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub Sort_1()</span></p>	
+<p class="c1"><span class="c2">&#39;Sorteert entire row (hele rij) van geselecteerd bereik van laag naar hoog volgens de kolom van de eerste geselecteerde cel in het bereik</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim oneRange As Range</span></p>	
+<p class="c1"><span class="c2">Dim aCell As Range</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Set aCell = ActiveCell</span></p>	
+<p class="c1"><span class="c2">Selection.EntireRow.Select</span></p>	
+<p class="c1"><span class="c2">Set oneRange = Selection</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">oneRange.Sort Key1:=aCell, Order1:=xlAscending, Header:=xlGuess, Orientation:=xlTopToBottom</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>		
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Indien er een header is,vul Header:=xlYes i.p.v. Header:=xlGuess.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="3">Check if a certain (pdf) file is open and close it</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">To check if the file is open or not, you can see the code that I posted HERE So the usage will be</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Sub Sample()</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim Ret</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&#39;~~&gt; Change this to the relevant file path and name</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Ret = IsFileOpen(&quot;C:\Current Letter Preview.Pdf&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If Ret = True Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox &quot;File is open&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Else</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox &quot;File is Closed&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Function IsFileOpen(FileName As String)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim ff As Long, ErrNo As Long</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;On Error Resume Next</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ff = FreeFile()</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Open FileName For Input Lock Read As #ff</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Close ff</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ErrNo = Err</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;On Error GoTo 0</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Select Case ErrNo</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Case 0: IsFileOpen = False</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Case 70: IsFileOpen = True</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Case Else: Error ErrNo</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End Select</span></p>	
+<p class="c1"><span class="c2">End Function</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="4">Excel VBA: Writing data to a CLOSED WORKBOOK [Without making it wisible]</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">You need to have it open to work with it. You don&#39;t have to make it visible.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">This manipulates a workbook but never shows it</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Code:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Sub OpenAndManipulate()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim xl0 As New Excel.Application</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim xlw As New Excel.Workbook</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set xlw = xl0.Workbooks.Open(&quot;c:\somefile.xls&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;xl0.Worksheets.Add</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;xl0.ActiveSheet.Cells(1, 1) = &quot;Hello&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;xl0.ActiveSheet.Cells(1, 2) = &quot;World&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;xlw.Save</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;xlw.Close</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set xl0 = Nothing</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set xlw = Nothing</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="5">Reset UsedRange</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">How to reset the last cell in Excel</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c5"><a class="c6" href="https://www.google.com/url?q=http://access-excel.tips/excel-vba-usedrange-property/&amp;sa=D&amp;ust=1539525507143000">http://access-excel.tips/excel-vba-usedrange-property/</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+<p class="c1"><span class="c2">Reset UsedRange</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">UsedRange can be reset using the following Procedure.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Public Sub reset_usedrange()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;a = ActiveSheet.UsedRange.Rows.Count</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">The above procedure work under normal circumstances, but it does not work in some cases where the data source was downloaded from other system. In that case you should use the below procedure to clear all empty cells and then delete the row.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Public Sub delete_empty_row()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Application.ScreenUpdating = False</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For Each usedrng In ActiveSheet.UsedRange</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If usedrng.MergeCells = True Then</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If usedrng.Value = &quot;&quot; Then</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usedrng.Value = &quot;&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Else</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If usedrng.Value = &quot;&quot; Then</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usedrng.ClearContents</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ActiveSheet.UsedRange</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;usedRangeLastColNum = ActiveSheet.UsedRange.Columns.Count</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;usedrangelastrow = ActiveSheet.UsedRange.Rows.Count</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For r = usedrangelastrow To 1 Step -1</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If Application.WorksheetFunction.CountA(Cells(r, usedRangeLastColNum).EntireRow) &lt;&gt; 0 Then</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit For</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Else</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cells(r, usedRangeLastColNum).EntireRow.Delete</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next r</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For c = usedRangeLastColNum To 1 Step -1</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If Application.WorksheetFunction.CountA(Cells(1, c).EntireColumn) &lt;&gt; 0 Then</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit For</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Else</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cells(1, c).EntireColumn.Delete</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next c</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ActiveSheet.UsedRange</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Application.ScreenUpdating = True</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="6">Laatste rij in kolom, LastRow</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Dim AALastRow</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">AALastRow = Range(&quot;A&quot; &amp; Rows.Count).End(xlUp).Row</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="7">Opening an HTML Page in a Macro</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c5"><a class="c6" href="https://www.google.com/url?q=https://excel.tips.net/T002003_Opening_an_HTML_Page_in_a_Macro.html&amp;sa=D&amp;ust=1539525507154000">https://excel.tips.net/T002003_Opening_an_HTML_Page_in_a_Macro.html</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+<p class="c1"><span class="c2">For some time now, Excel has been &quot;Web aware,&quot; meaning that the program knows how to handle hyperlinks. You can add a hyperlink in a document, click on that link, and Excel opens your Web browser and displays the contents of that link in the browser. (You can also create a hyperlink to other Office documents, including Excel workbooks.) You can even create hyperlinks to different objects on your worksheet, such as a command button in a form.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">What if you want to start the browser and open an HTML file from within a VBA macro, however? There are a couple of ways that you can do this. The first is to simply open a new Internet Explorer object within your code. A macro to do this would appear as follows:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Sub DoBrowse1()</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim ie As Object</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set ie = CreateObject(&quot;Internetexplorer.Application&quot;)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ie.Visible = True</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ie.Navigate &quot;c:\temp\MyHTMLfile.htm&quot;</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c1"><span class="c2">This macro will open the file c:\temp\MyHTMLfile.htm in a new Internet Explorer window. If you want to instead open a Web page from over the Internet, you can do so simply by changing where you want to navigate. (Replace the file path with a URL.)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Another way to accomplish the same task is to rely on Excel to figure out what your default browser is and open the HTML resource. The following macro does the trick:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Sub DoBrowse2()</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ActiveWorkbook.FollowHyperlink _</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address:=&quot;c:\temp\MyHTMLfile.htm&quot;, _</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NewWindow:=True</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c1"><span class="c2">Again, the browser opens a new window and displays the specified file. You can change the Address parameter to any URL that you desire.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">ExcelTips is your source for cost-effective Microsoft Excel training. This tip (2003) applies to Microsoft Excel 97, 2000, 2002, and 2003. You can find a version of this tip for the ribbon interface of Excel (Excel 2007 and later) here: Opening an HTML Page in a Macro.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="8">VBA tips</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">VBA Express: Excel - Remove Caption from user Form</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;http://www.vbaexpress.com/kb/getarticle.php?kb_id=292&amp;PHPSESSID=358574829d8d3f3668469c2af59218da</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">VBA voor smarties: VBA-objecten met VBA-code maken/wijzigen</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;http://www.snb-vba.eu/VBA_Excel_VBproject.html#L22</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">VBA Excel Get value from closed workbook - ExecuteExcel4Macro</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;https://bettersolutions.com/excel/macros/application-executeexcel4macro.htm</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">How to tell if sheet exists in closed workbook | PC Review</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;https://www.pcreview.co.uk/threads/how-to-tell-if-sheet-exists-in-closed-workbook.3359648/</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="9">VBA code to center userform</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">he following code will center the userform in Excel&#39;s window:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Code:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">With UserForm1</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;.StartUpPosition = 0</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;.Left = Application.Left + (0.5 * Application.Width) - (0.5 * .Width)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;.Top = Application.Top + (0.5 * Application.Height) - (0.5 * .Height)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;.Show</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End With</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="10">Excel alle bladen zichtbaar maken</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Unhide all worksheets / make all worksheets visible</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">1. Druk Alt+F11 om de Visuals Basis Editor weer te geven.</span></p>	
+<p class="c1"><span class="c2">2. Open Venster Direkt (Ctrl+G)</span></p>	
+<p class="c1"><span class="c2">3. Type de volgende programmacode en druk op Enter, waarna de opdracht direct wordt uitgevoerd.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">For Each s In Sheets: s.Visible = True: Next</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">______________________________________________</span></p>	
+<p class="c1"><span class="c2">Bron:</span></p>	
+<p class="c1"><span class="c5"><a class="c6" href="https://www.google.com/url?q=https://www.accountingweb.com/technology/excel/unhiding-all-worksheets-within-an-excel-workbook&amp;sa=D&amp;ust=1539525507163000">https://www.accountingweb.com/technology/excel/unhiding-all-worksheets-within-an-excel-workbook</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+<p class="c1"><span class="c2">Unhiding All Worksheets Within an Excel Workbook</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="11">Check if a Workbook is Open</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub WBG()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim WB As Workbook</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">On Error Resume Next</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set WB = Workbooks(&quot;Your Workbook.xls&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If Err Then MsgBox &quot;The workbook is not open&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">On Error GoTo 0</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="12">open URL with Google Chrome</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub Chrome()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Dim chromePath As String</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;chromePath = &quot;&quot;&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot;&quot;&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span>&nbsp;&nbsp;Shell (chromePath &amp; &quot; -url </span><span class="c5"><a class="c6" href="https://www.google.com/url?q=https://google.com&amp;sa=D&amp;ust=1539525507167000">https://google.com</a></span><span class="c2">&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Shell (chromePath &amp; &quot;F:\1-Intern\Amstelveenlijn-2020.png&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Bron:</span></p>	
+<p class="c1"><span class="c5"><a class="c6" href="https://www.google.com/url?q=https://www.mrexcel.com/forum/excel-questions/499403-vba-open-url-google-chrome.html&amp;sa=D&amp;ust=1539525507169000">https://www.mrexcel.com/forum/excel-questions/499403-vba-open-url-google-chrome.html</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="13">How to find numbers from a string?</a></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="14">CleanString function</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Regular expressions are built to parse. While the syntax can take a while to pick up on this approach is very efficient, and is very flexible for handling more complex string extractions/replacements</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Sub Tester()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox CleanString(&quot;3d1fgd4g1dg5d9gdg&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Function CleanString(strIn As String) As String</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim objRegex</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set objRegex = CreateObject(&quot;vbscript.regexp&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;With objRegex</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Global = True</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Pattern = &quot;[^\d]+&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;CleanString = .Replace(strIn, vbNullString)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End With</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Function</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="15">Filter uitzetten / Turn Off auto filter</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">&#39;Filter uitzetten</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">If ActiveSheet.AutoFilterMode Then ActiveSheet.AutoFilterMode = False</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="16">Current directory</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">MyPath = ActiveWorkbook.Path</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="17">Filter alles zichtbaar of filter alleen selectie</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub Filter_alles_zichtbaar()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;If ActiveSheet.FilterMode Then</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ActiveSheet.AutoFilter.ShowAllData</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Range(&quot;A2&quot;).Select</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Selection.End(xlDown).Select</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;==================================================</span></p>	
+<p class="c1"><span class="c2">Sub Filter1_alleenSelectie()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim tempRngRij As Range, tempRngKol As Range</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim laatsteRij As Integer, laatsteKol As Integer, i As Integer</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set tempRngRij = Range(&quot;A2&quot;).End(xlDown)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;laatsteRij = tempRngRij.Row</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set tempRngKol = Range(&quot;A2&quot;).End(xlToRight)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;laatsteKol = tempRngKol.Column</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim rijNr As Integer</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;rijNr = ActiveCell.Row</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;kolomNr = ActiveCell.Column</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Veldnr = kolomNr</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;myFilter = ActiveCell.Formula</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ActiveSheet.Range(&quot;$A$2:$N$&quot; &amp; laatsteRij).AutoFilter Field:=Veldnr, Criteria1:=myFilter</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Range(&quot;B2&quot;).Select</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Selection.End(xlDown).Select</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="18">vbYesNo default No</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub test()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim x</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">x = MsgBox(&quot;Test&quot;, vbYesNo + vbDefaultButton2)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="19">Bevestiging vragen-1 simpel</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">myCheck = MsgBox(&quot;De geselecteerde cel wordt overgeschreven door ....! Doorgaan?&quot;, vbYesNo)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If myCheck = vbNo Then Exit Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="20">Inputbox with defaultvalue</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">OloNr = InputBox(&quot;Vul het OLO-nummer in:&quot;, &quot;OLO-nummer&quot;, &quot;2657943&quot;)</span></p>	
+<p class="c1"><span class="c2">De 1e gegeven is de vraag die gesteld wordt</span></p>	
+<p class="c1"><span class="c2">de 2e is de titel in het vraagvenstertje</span></p>	
+<p class="c1"><span class="c2">de 3e is de defaultwaarde</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="21">New Line in VBA Excel Nieuwe regel</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">&amp; vbNewLine &amp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&amp; vbCrLf &amp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&amp; Char(10) &amp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&amp; Char(13) &amp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="22">Selecteer de eerste cel in actieve rij</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Range(&quot;A&quot; &amp; (ActiveCell.Row)).Select</span></p>	
+<p class="c1"><span class="c2">Cells(Application.ActiveCell.Row, 1).Select</span></p>	
+<p class="c1"><span class="c2">Range(Cells(Selection.Row, 1).Address).Select.m66 thyroid i6 ok u i6 8 i6 at a Meaza 9 99th and i6 j ploo</span></p>	
+<p class="c1"><span class="c2">Cells(ActiveWindow.RangeSelection.Row, 1).Selec i6 9am8Ft</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="23">TechOnTheNet MS Excel Macros/VBA</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c5"><a class="c6" href="https://www.google.com/url?q=https://www.techonthenet.com/excel/macros/index.php&amp;sa=D&amp;ust=1539525507185000">https://www.techonthenet.com/excel/macros/index.php</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="24">Bevestiging vragen-2 uitgebreid</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Private Sub Bevestiging_vragen()</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim Proceed As VbMsgBoxResult</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim Prompt As String</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim Title As String</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Prompt = &quot;Weet je zeker dat je deze actie ...................... wil uitvoeren &quot; &amp; &quot;?&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Title = &quot;Bevestigingsprocedure&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Proceed = MsgBox(Prompt, vbYesNo + vbQuestion, Title)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If Proceed = vbNo Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox &quot;Procedure geanulleerd&quot;, vbInformation, &quot;Procedure Onderbroken&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Sub</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="25">How to clear the Debug Window (Immediate Window) in VBA</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub stance()</span></p>	
+<p class="c1"><span class="c2">Dim x As Long</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">For x = 1 To 10</span></p>	
+<p class="c1"><span class="c2">Debug.Print x</span></p>	
+<p class="c1"><span class="c2">Next</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Debug.Print Now</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Application.SendKeys &quot;^g ^a {DEL}	
+&quot;</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="26">Is there any difference between vbNullString and &ldquo;&rdquo;?</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">-------------------------------------</span></p>	
+<p class="c1"><span class="c2">Example:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">If tempTekst = vbNullString Then Exit Sub</span></p>	
+<p class="c1"><span class="c2">-------------------------------------</span></p>	
+<p class="c1"><span class="c2">Is there any difference between vbNullString and &ldquo;&rdquo;?</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">What a waste! First of all, the string &quot;&quot; takes 6 bytes of RAM each time you use it. Consider the alternative:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Text$ = vbNullString</span></p>	
+<p class="c1"><span class="c2">So what is this? vbNullString is a special VB constant that denotes a null string. The &quot;&quot; literal is an empty string. There&#39;s an important difference. An empty string is a real string. A null string is not. It is just a zero. If you know the C language, vbNullString is the equivalent of NULL.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">For most purposes, vbNullString is equivalent to &quot;&quot; in VB. The only practical difference is that vbNullString is faster to assign and process and it takes less memory.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="27">Check if Clipboard is Empty</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">To determine whether the clipboard is empty or not, count the number of formats present on the clipboard. The IsClipboardEmpty() function shown here does shows how:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Public Declare Function CountClipboardFormats Lib &quot;user32&quot; () As Long</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Function IsClipboardEmpty() As Boolean</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;IsClipboardEmpty = (CountClipboardFormats() = 0)</span></p>	
+<p class="c1"><span class="c2">End Function</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="28">Filters alles zichtbaar Show All Records</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Show All Records</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">The following Excel AutoFilter VBA code shows all records, if a filter has been applied.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Sub ShowAllRecords()</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;If ActiveSheet.FilterMode Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ActiveSheet.ShowAllData</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="29">Case statement, Select Case, Case Is, Case Else</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c5"><a class="c6" href="https://www.google.com/url?q=https://www.techonthenet.com/excel/formulas/case.php&amp;sa=D&amp;ust=1539525507194000">https://www.techonthenet.com/excel/formulas/case.php</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+<p class="c1"><span class="c2">Let&#39;s look at some Excel CASE statement function examples and explore how to use the CASE statement in Excel VBA code:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Select Case LRegion</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case &quot;N&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;North&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case &quot;S&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;South&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case &quot;E&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;East&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case &quot;W&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;West&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;End Select</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c1"><span class="c2">With the Excel CASE statement, you can also use the To keyword to specify a range of values. For example:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Select Case LNumber</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case 1 To 10</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;North&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case 11 To 20</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;South&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case 21 To 30</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;East&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case Else</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;West&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;End Select</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c1"><span class="c2">With the Excel CASE statement, you can also comma delimit values. For example:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Select Case LNumber</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case 1, 2</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;North&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case 3, 4, 5</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;South&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case 6</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;East&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case 7, 11</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;West&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;End Select</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c1"><span class="c2">And finally, with the Excel CASE statement, you can also use the Is keyword to compare values. For example:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Select Case LNumber</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case Is &lt; 100</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;North&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case Is &lt; 200</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;South&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case Is &lt; 300</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;East&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;Case Else</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRegionName = &quot;West&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;End Select</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="30">Save as dialog</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub Save_as_dialog()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim IntialName As String, myBestandsNaam As String</span></p>	
+<p class="c1"><span class="c2">Dim fileSaveName As Variant</span></p>	
+<p class="c1"><span class="c2">Dim LenTotaal As Integer</span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c1"><span class="c2">myBestandsNaam = ActiveWorkbook.Name</span></p>	
+<p class="c1"><span class="c2">LenTotaal = Len(myBestandsNaam)</span></p>	
+<p class="c1"><span class="c2">InitialName = Left(ActiveWorkbook.Name, LenTotaal - 5)</span></p>	
+<p class="c1"><span class="c2">fileSaveName = Application.GetSaveAsFilename(InitialFileName:=InitialName, fileFilter:=&quot;Pdf Files (*.pdf), *.pdf&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">If fileSaveName &lt;&gt; False Then</span></p>	
+<p class="c1"><span class="c2">&#39; MsgBox &quot;Save as &quot; &amp; fileSaveName</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;ActiveWorkbook.SaveAs fileName:=fileSaveName</span></p>	
+<p class="c1"><span class="c2">End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="31">Check if folder exists En Check of file exists</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Function CheckFolderExists(strPath As String) As Boolean</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">On Error Resume Next</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Err.Clear</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">ChDir strPath</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">If Err.Number = 0 Then CheckFolderExists = True</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Function</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Function CheckFileExists(FileName As String) As Boolean</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CheckFileExists = (Dir(FileName) &gt; &quot;&quot;)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Function</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="32">Print en PrintPreview</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Difference between print and print preview events in excel vba</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Private Sub Workbook_BeforePrint(Cancel As Boolean)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim Print_or_Preview As XlYesNoGuess</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Application.EnableEvents = False</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Cancel = True</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Print_or_Preview = MsgBox(&quot;Show Print Preview?&quot;, vbYesNo)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If Print_or_Preview = True Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ActiveWindow.ActiveSheet.PrintPreview</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Else</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ActiveWindow.ActiveSheet.PrintOut</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">Application.EnableEvents = True</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span>Bron: </span><span class="c5"><a class="c6" href="https://www.google.com/url?q=http://stackoverflow.com/questions/1371107/difference-between-print-and-print-preview-events-in-excel-vba&amp;sa=D&amp;ust=1539525507207000">http://stackoverflow.com/questions/1371107/difference-between-print-and-print-preview-events-in-excel-vba</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="33">Een rij onder de active rij invoegen met dezelfde opmaak</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub InsertRowBelow()</span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;r = Selection.Row</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Cells(r + 1, 1).EntireRow.Insert</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Rows(r).Copy</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Cells(r + 1, 1).EntireRow.PasteSpecial xlPasteFormats</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Application.CutCopyMode = False</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Cells(r + 1, 1).Select</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="35">Selecteer bereik tussen actieve cel en laatste cel in de kolom</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Dim RefCel As Range, myBlok As Range</span></p>	
+<p class="c1"><span class="c2">Dim laatsteRij As Integer</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;laatsteRij = Range(&quot;B3&quot;).End(xlDown).Row</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set myBlok = Range(Range(&quot;A3&quot;), Cells(laatsteRij, 1))</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="36">Zoeken in kolom</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub Zoek_in_Kolom()</span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c1"><span class="c2">zoekt in de kolom waar de actieve cel zich bevindt</span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c1"><span class="c2">Dim startCel As Range</span></p>	
+<p class="c1"><span class="c2">Dim myKolomNr As Integer</span></p>	
+<p class="c1"><span class="c2">Dim zoekTerm As String</span></p>	
+<p class="c1"><span class="c2">&#39;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;zoekTerm = &quot;&lt;/html&gt;&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;myKolomNr = ActiveCell.Column</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set startCel = Cells(1, myKolomNr)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Columns(myKolomNr).Find(What:=zoekTerm, After:=startCel, LookIn:=xlFormulas, _</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LookAt:=xlPart, SearchOrder:=xlByColumns, SearchDirection:=xlNext, _</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MatchCase:=False, SearchFormat:=False).Activate</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="37">VBA code to copy and paste excelsheet into a text file, save and close</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub SaveUsedRangeToTextFile()</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Dim R As Long, C As Long, FF As Long</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Dim TextLine As String, TextOut As String</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Dim Data As Variant</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Data = ActiveSheet.UsedRange</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;For R = 1 To UBound(Data, 1)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;TextLine = &quot;&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For C = 1 To UBound(Data, 2)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TextLine = TextLine &amp; vbTab &amp; Cells(R, C)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;TextOut = TextOut &amp; vbCrLf &amp; Mid(TextLine, 2)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Next</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;TextOut = Mid(TextOut, 3)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;FF = FreeFile</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Open &quot;FULL_PATH_AND_FILENAME_TO_SAVE_TO_GOES_HERE&quot; For Output As #FF</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Print #FF, TextOut</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Close #FF</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="38">Embedding strings containing double quotes in VBA code</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span>Bron: </span><span class="c5"><a class="c6" href="https://www.google.com/url?q=http://www.techrepublic.com/blog/microsoft-office/5-rules-for-embedding-strings-in-vba-code/&amp;sa=D&amp;ust=1539525507217000">http://www.techrepublic.com/blog/microsoft-office/5-rules-for-embedding-strings-in-vba-code/</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+<p class="c1"><span class="c2">Rule #2: Use two quotation marks to denote one when embedding one string in another</span></p>	
+<p class="c1"><span class="c2">What in the world does that mean? Sometimes an example works better than words. Let&#39;s take the following search string component where Harkins is a literal string:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">[LastName] = Harkins</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">You might try the following, but it won&#39;t work:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&quot;[LastName] = &quot;Harkins&quot;&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">VBA will interpret Harkins as a variable, which will return an error. The correct way to delimit Harkins within the larger string follows:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&quot;[LastName] = &quot;&quot;Harkins&quot;&quot;&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">It might not make sense, but that&#39;s how it works. Insert two quotation marks both before and after the string you&#39;re embedding. Then, don&#39;t forget the closing quotation mark for the entire component&mdash;the one to match the opening quotation mark before [LastName].</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Rule #3: Use a pair of apostrophes to delimit one string within string</span></p>	
+<p class="c1"><span class="c2">Using quotation marks to embed one string in another gets confusing (Rule #2). Fortunately, VBA also recognizes the apostrophe character (&#39;) as a string delimiter. Instead of requiring six quotation marks, you could delimit the above filtering component as follows:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&quot;[LastName] = &#39;Harkins&#39;&quot;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">That&#39;s one apostrophe and one quotation mark at the end, not three apostrophes. This form is easier to remember, easier to type, and easier to interpret when you&#39;re reviewing the code later.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="40">Dialoogvenster voor importeren toetsbladen</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c2">Sub TeImporterenSelectedSheets()</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Dim i As Integer</span></p>	
+<p class="c1"><span class="c2">Dim TopPos As Integer</span></p>	
+<p class="c1"><span class="c2">Dim SheetCount As Integer</span></p>	
+<p class="c1"><span class="c2">Dim PrintDlg As DialogSheet</span></p>	
+<p class="c1"><span class="c2">Dim CurrentSheet As Worksheet</span></p>	
+<p class="c1"><span class="c2">Dim CB As CheckBox</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Application.ScreenUpdating = False</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Check for protected workbook</span></p>	
+<p class="c1"><span class="c2">If ActiveWorkbook.ProtectStructure Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;MsgBox &quot;Workbook is protected.&quot;, vbCritical</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Exit Sub</span></p>	
+<p class="c1"><span class="c2">End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Add a temporary dialog sheet</span></p>	
+<p class="c1"><span class="c2">Sheets(&quot;Verificatiedossier&quot;).Select</span></p>	
+<p class="c1"><span class="c2">Set CurrentSheet = ActiveSheet</span></p>	
+<p class="c1"><span class="c2">Set PrintDlg = ActiveWorkbook.DialogSheets.Add</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">SheetCount = 0</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Add the checkboxes</span></p>	
+<p class="c1"><span class="c2">TopPos = 40</span></p>	
+<p class="c1"><span class="c2">For i = 1 To ActiveWorkbook.Worksheets.Count</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If Left((Worksheets(i).Name), 6) = &quot;Toets-&quot; Then &#39;begin van if ALEM</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set CurrentSheet = ActiveWorkbook.Worksheets(i)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Skip empty sheets and hidden sheets</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If Application.CountA(CurrentSheet.Cells) &lt;&gt; 0 And _</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CurrentSheet.Visible Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SheetCount = SheetCount + 1</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;Change status for all checkboxes to on if B98 = yes</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PrintDlg.CheckBoxes.Add 78, TopPos, 150, 16.5</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PrintDlg.CheckBoxes(SheetCount).Value = xlOff</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PrintDlg.CheckBoxes(SheetCount).Text = CurrentSheet.Name</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TopPos = TopPos + 13</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If &#39;einde van if ALEM</span></p>	
+<p class="c1"><span class="c2">Next i</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Move the OK and Cancel buttons</span></p>	
+<p class="c1"><span class="c2">PrintDlg.Buttons.Left = 240</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Set dialog height, width, and caption</span></p>	
+<p class="c1"><span class="c2">With PrintDlg.DialogFrame</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;.Height = Application.Max _</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(68, PrintDlg.DialogFrame.Top + TopPos - 34)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;.Width = 230</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;.Caption = &quot;Selecteer de te importeren toetsbladen&quot;</span></p>	
+<p class="c1"><span class="c2">End With</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Display the dialog box</span></p>	
+<p class="c1"><span class="c2">Sheets(&quot;Verificatiedossier&quot;).Activate</span></p>	
+<p class="c1"><span class="c2">If SheetCount &lt;&gt; 0 Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If PrintDlg.Show Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Each CB In PrintDlg.CheckBoxes</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If CB.Value = xlOn Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Worksheets(CB.Caption).Select Replace:=True</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox &quot;Hier voer je de procedure voor het importeren uit.&quot;</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next CB</span></p>	
+<p class="c1"><span class="c2">&#39; ActiveWindow.SelectedSheets.PrintOut copies:=1</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ActiveSheet.Select</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">Else</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;MsgBox &quot;All worksheets are empty.&quot;</span></p>	
+<p class="c1"><span class="c2">End If</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Delete temporary dialog sheet (without a warning)</span></p>	
+<p class="c1"><span class="c2">Application.DisplayAlerts = False</span></p>	
+<p class="c1"><span class="c2">PrintDlg.Delete</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&#39;Reactivate original sheet</span></p>	
+<p class="c1"><span class="c2">Sheets(&quot;Verificatiedossier&quot;).Activate</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Application.ScreenUpdating = True</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="41">VBA to unselect a selected range. Removing Cells from a Selected Range</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span>bron: </span><span class="c5"><a class="c6" href="https://www.google.com/url?q=http://excel.tips.net/T003102_Removing_Cells_from_a_Selected_Range.html&amp;sa=D&amp;ust=1539525507232000">http://excel.tips.net/T003102_Removing_Cells_from_a_Selected_Range.html</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+<p class="c1"><span class="c2">Removing Cells from a Selected Range</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Sub A01_UnSelectSomeCells()</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim rSelect As Range</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim rUnSelect As Range</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim rNew As Range</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim rCell As Range</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set rSelect = Selection</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set rUnSelect = Application.InputBox( _</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;What cells do you want to exclude?&quot;, Type:=8)</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For Each rCell In rSelect</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If Intersect(rCell, rUnSelect) Is Nothing Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If rNew Is Nothing Then</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set rNew = rCell</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Else</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set rNew = Union(rNew, rCell)</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;rNew.Select</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set rCell = Nothing</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set rSelect = Nothing</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set rUnSelect = Nothing</span></p>	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set rNew = Nothing</span></p>	
+<p class="c1"><span class="c2">End Sub</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="42">Excel cell locked after paste - 1</a></span></p>	
+<p class="c0"><span class="c3"></span></p>	
+<p class="c1"><span class="c5"><a class="c6" href="https://www.google.com/url?q=http://superuser.com/questions/392528/why-does-pasting-into-an-unprotected-cell-in-excel-protect-it&amp;sa=D&amp;ust=1539525507236000">http://superuser.com/questions/392528/why-does-pasting-into-an-unprotected-cell-in-excel-protect-it</a></span></p>	
+<p class="c0"><span class="c4"></span></p>	
+<p class="c1"><span class="c2">It is actually expected behavior (well expected by Microsoft, not necessarily by users) which is the good news. And there is a quite simple work around which is the even better news.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">When you paste in a piece of formatted text the cell gets given the &quot;Normal&quot; style and then has the required formatting layered on top. The &quot;Normal&quot; style by default has protection set to locked. So this is why it is being applied.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">The solution is to modify the &quot;Normal&quot; style. To replicate a solved version of this problem create a new workbook, then:</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">1) On the Home Ribbon in the Styles section right click on the Normal box and click Modify. Press the Format button and on the protection tab uncheck Locked. (Remember this only applies to this spreadsheet, but that all cells will now be unprotected rather than protected).</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">2) Select All cells, right click and choose format cells, and under protection check Locked.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">3) Select A1 only, right click, choose format cells, and under protection uncheck locked.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">4) Protect the worksheet</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Now we should be back at the same point as the example in the question in terms of locked and unlocked cells but with a different Normal style.</span></p>	
+<p class="c0"><span class="c2"></span></p>	
+<p class="c1"><span class="c2">Now when I paste text in from word or elsewhere the cell does not become protected.</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="43">Excel AutoFilter With Criteria in a Range</a></span></p>	
+	
+<p class="c1"><span class="c2">Bron:</span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://contexturesblog.com/archives/2010/12/15/excel-autofilter-with-criteria-in-a-range/" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://contexturesblog.com/archives/2010/12/15/excel-autofilter-with-criteria-in-a-range/</span></a></p><br>	
+	
+<p class="c1"><span class="c2">Sub FilterRangeCriteria()</span></p>	
+	
+<p class="c1"><span class="c2">Dim vCrit As Variant</span></p>	
+	
+<p class="c1"><span class="c2">Dim wsO As Worksheet</span></p>	
+	
+<p class="c1"><span class="c2">Dim wsL As Worksheet</span></p>	
+	
+<p class="c1"><span class="c2">Dim rngCrit As Range</span></p>	
+	
+<p class="c1"><span class="c2">Dim rngOrders As Range</span></p>	
+	
+<p class="c1"><span class="c2">Set wsO = Worksheets("Orders")</span></p>	
+	
+<p class="c1"><span class="c2">Set wsL = Worksheets("Lists")</span></p>	
+	
+<p class="c1"><span class="c2">Set rngOrders = wsO.Range("$A$1").CurrentRegion</span></p>	
+	
+<p class="c1"><span class="c2">Set rngCrit = wsL.Range("CritList")</span></p>	
+	
+<p class="c1"><span class="c2">vCrit = rngCrit.Formula</span></p>	
+	
+<p class="c1"><span class="c2">rngOrders.AutoFilter _</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Field:=4, _</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Criteria1:=Application.Transpose(vCrit), _</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Operator:=xlFilterValues</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="44">Find dublicates in column (2)</a></span></p>	
+	
+<p class="c1"><span class="c2">Private Sub FindDublicates ()</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://www.encodedna.com/excel/find-duplicate-in-excel-using-vba-macro.htm" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://www.encodedna.com/excel/find-duplicate-in-excel-using-vba-macro.htm</span></a></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;</span></p><br>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;On Error GoTo ErrHandler</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Application.ScreenUpdating = False</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim myDataRng As Range</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim cell As Range</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;' WE WILL SET THE RANGE (SECOND COLUMN).</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set myDataRng = Range("B1:B" &amp; Cells(Rows.Count, "B").End(xlUp).Row)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For Each cell In myDataRng</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell.Offset(0, 0).Font.Color = vbBlack ' DEFAULT COLOR.</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' LOCATE DUPLICATE VALUE(S) IN THE SPECIFIED.</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If Application.Evaluate("COUNTIF(" &amp; myDataRng.Address &amp; "," &amp; cell.Address &amp; ")") &gt; 1 Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell.Offset(0, 0).Font.Color = vbRed ' CHANGE COLOR TO RED.</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next cell</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set myDataRng = Nothing</span></p>	
+	
+<p class="c1"><span class="c2">ErrHandler:</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Application.EnableEvents = True</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Application.ScreenUpdating = True</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="45">Find dublicates in column (1)</a></span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://analysistabs.com/vba/find-duplicate-values-column/" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://analysistabs.com/vba/find-duplicate-values-column/</span></a></p><br>	
+	
+<p class="c1"><span class="c2">Sub sbFindDuplicatesInColumn()</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim lastRow As Long</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim matchFoundIndex As Long</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim iCntr As Long</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;lastRow = Range("A65000").End(xlUp).Row</span></p><br>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For iCntr = 1 To lastRow</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If Cells(iCntr, 1) &lt;&gt; "" Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matchFoundIndex = WorksheetFunction.Match(Cells(iCntr, 1), Range("A1:A" &amp; lastRow), 0)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If iCntr &lt;&gt; matchFoundIndex Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cells(iCntr, 2) = "Duplicate"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="46">Scroll to active row or column</a></span></p>	
+	
+<p class="c1"><span class="c2">ActiveWindow.ScrollRow = 5 'the row you want to scroll to</span></p>	
+	
+<p class="c1"><span class="c2">ActiveWindow.ScrollColumn = 2 'the column you want to scroll to</span></p><br>	
+	
+<p class="c1"><span class="c2">ActiveWindow.ScrollColumn = ActiveCell.Column 'scroll to active cell colum</span></p>	
+	
+<p class="c1"><span class="c2">ActiveWindow.ScrollRow = ActiveCell.Row 'scroll to active cell row</span></p><br><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="47">VBA Zoom to Selection, inzoomen op selectie</a></span></p>	
+	
+<p class="c1"><span class="c2">Selecteer het gebied en daarna</span></p>	
+	
+<p class="c1"><span class="c2">ActiveWindow.Zoom = True</span></p><br>	
+	
+<p class="c1"><span class="c2">Bijvoorbeeld:</span></p>	
+	
+<p class="c1"><span class="c2">Sheet1.Range("A1:F15").Select 'set range zoom</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">ActiveWindow.Zoom = True</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="48">For each cel in DoelRange waarde gelijk aan BronRange</a></span></p>	
+	
+<p class="c1"><span class="c2">sh1 en sh2 zijn twee verschillende werkbladen eventueel in verschillende workbooks. Eerst de absolute row en colomnummer bepalen en daarna gebruik je het bereik Cells(i,j)</span></p><br>	
+	
+<p class="c1"><span class="c2">Dim cel As Range</span></p>	
+	
+<p class="c1"><span class="c2">For Each cel In DoelBlok.Cells</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;i = cel.Row</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;j = cel.Column</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;sh2.Cells(i, j).Value = sh1.Cells(i, j).Value</span></p>	
+	
+<p class="c1"><span class="c2">Next</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="49">Select range</a></span></p>	
+	
+<p class="c1"><span class="c2">--------------------------------------------------</span></p>	
+	
+<p class="c1"><span class="c2">Gebruik van Range (cells, cells)</span></p>	
+	
+<p class="c1"><span class="c2">Set lastCel = Range("A1").End(xlDown).End(xlDown).Offset(0, 1).End(xlUp)</span></p>	
+	
+<p class="c1"><span class="c2">Set Bronblok = Range(Cells(1, 2), Cells(lastCel.Row, 10))</span></p>	
+	
+<p class="c1"><span class="c2">------------------------------------------------</span></p>	
+	
+<p class="c1"><span class="c2">Dim rng As Range</span></p>	
+	
+<p class="c1"><span class="c2">Set rng=Range("A10:F" &amp; Range("A65536").End(xlUp).Row)</span></p><br>	
+	
+<p class="c1"><span class="c2">------------------------------------------------</span></p>	
+	
+<p class="c1"><span class="c2">Range("A1", Range("A1").End(xlDown))</span></p><br>	
+	
+<p class="c1"><span class="c2">----------------------------------------------</span></p>	
+	
+<p class="c1"><span class="c2">StartCell = ActiveCell.Offset(2, 1).Address</span></p>	
+	
+<p class="c1"><span class="c2">EndCell = ActiveCell.Offset(5, 3).Address</span></p>	
+	
+<p class="c1"><span class="c2">Range(StartCell, EndCell).Select</span></p><br>	
+	
+<p class="c1"><span class="c2">---------------------------------------------</span></p>	
+	
+<p class="c1"><span class="c2">Range(Cells(Selection.Row, 1), Cells(Selection.Row, 3)).Select</span></p><br>	
+	
+<p class="c1"><span class="c2">------------------------------------------</span></p>	
+	
+<p class="c1"><span class="c2">Range("C2:" &amp; ActiveCell.Address).Select</span></p>	
+	
+<p class="c1"><span class="c2">Range("C2",ActiveCell).Select</span></p><br>	
+	
+<p class="c1"><span class="c2">Range("C2", "J11").Select</span></p>	
+	
+<p class="c1"><span class="c2">is hetzelfde als</span></p>	
+	
+<p class="c1"><span class="c2">Range("C2: J11").Select</span></p>	
+	
+<p class="c1"><span class="c2">-----------------------------------------</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="50">Save file in temporary windows folder, Windows Temp folder</a></span></p>	
+	
+<p class="c1"><span class="c2">FileCopy "E:\Personal_Files\myvba.xlsm", Environ("temp") &amp; "\myvba.xlsm"</span></p><br>	
+	
+<p class="c1"><span class="c2">If Dir(Environ("temp") &amp; "\myvba.xlsm") &lt;&gt; "" Then Kill Environ("temp") &amp; "\myvba.xlsm"</span></p><br><br>	
+	
+<p class="c1"><span class="c2">str_tmppath = Environ("temp")</span></p>	
+	
+<p class="c1"><span class="c2">?str_tmppath</span></p>	
+	
+<p class="c1"><span class="c2">C:\Users\ALEM~1.HAI\AppData\Local\Temp</span></p><br>	
+	
+<p class="c1"><span class="c2">Zie:</span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://www.mrexcel.com/forum/excel-questions/548857-copy-excel-file-default-user-temp-folder.html" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://www.mrexcel.com/forum/excel-questions/548857-copy-excel-file-default-user-temp-folder.html</span></a></p><br>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://www.rondebruin.nl/win/s3/win027.htm" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://www.rondebruin.nl/win/s3/win027.htm</span></a></p><br>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://www.mrexcel.com/forum/excel-questions/240975-get-path-temp-folder.html" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://www.mrexcel.com/forum/excel-questions/240975-get-path-temp-folder.html</span></a></p><br><br>	
+	
+<p class="c1"><span class="c2">Without code you can do this to open the temp folder</span></p><br>	
+	
+<p class="c1"><span class="c2">Start&gt;Run</span></p>	
+	
+<p class="c1"><span class="c2">Enter %temp%</span></p>	
+	
+<p class="c1"><span class="c2">OK</span></p><br>	
+	
+<p class="c1"><span class="c2">Or use one of the two code examples</span></p><br>	
+	
+<p class="c1"><span class="c2">Sub GetTempFolder_1()</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;MsgBox Environ("Temp")</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;'Open folder in Explorer</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Shell "explorer.exe " &amp; Environ("Temp"), vbNormalFocus</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="51">VBA to tell if file is READ ONLY</a></span></p>	
+	
+<p class="c1"><span class="c2">Try something along the lines of the following code. It checks whether:</span></p>	
+	
+<p class="c1"><span class="c2">• the workbook exists;</span></p>	
+	
+<p class="c1"><span class="c2">• the workbook is in use by another user;</span></p>	
+	
+<p class="c1"><span class="c2">• Excel is running before starting a new instance;</span></p>	
+	
+<p class="c1"><span class="c2">• the user already has the workbook open; and</span></p>	
+	
+<p class="c1"><span class="c2">• the worksheet exists.</span></p>	
+	
+<p class="c1"><span class="c2">Late binding is assumed, but only minor mods are needed for use with early binding. Comments late in the code also show possible points to insert code for interaction between the document and workbook</span></p><br>	
+	
+<p class="c1"><span class="c2">Sub Demo()</span></p>	
+	
+<p class="c1"><span class="c2">Application.ScreenUpdating = False</span></p>	
+	
+<p class="c1"><span class="c2">Dim StrWkBkNm As String, StrWkSht As String</span></p>	
+	
+<p class="c1"><span class="c2">Dim xlApp As Object, xlWkBk As Object, xlWkSht As Object</span></p>	
+	
+<p class="c1"><span class="c2">Dim bStrt As Boolean, bOpen As Boolean, bSht As Boolean</span></p>	
+	
+<p class="c1"><span class="c2">' Excel workbook name &amp; path</span></p>	
+	
+<p class="c1"><span class="c2">StrWkBkNm = "C:\Users\" &amp; Environ("Username") &amp; "\Documents\WorkbookName.xlsx"</span></p>	
+	
+<p class="c1"><span class="c2">' Excel worksheet name</span></p>	
+	
+<p class="c1"><span class="c2">StrWkSht = "Sheet1"</span></p>	
+	
+<p class="c1"><span class="c2">' Does the file exist?</span></p>	
+	
+<p class="c1"><span class="c2">If Dir(StrWkBkNm) = "" Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;MsgBox "Cannot find the designated workbook: " &amp; StrWkBkNm, vbExclamation</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Exit Sub</span></p>	
+	
+<p class="c1"><span class="c2">End If</span></p>	
+	
+<p class="c1"><span class="c2">' Does another user have the file open?</span></p>	
+	
+<p class="c1"><span class="c2">If IsFileLocked(StrWkBkNm) = True Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;' Report and exit if true</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;MsgBox "The Excel workbook is in use." &amp; vbCr &amp; "Please try again later.", vbExclamation, "File in use"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Exit Sub</span></p>	
+	
+<p class="c1"><span class="c2">End If</span></p>	
+	
+<p class="c1"><span class="c2">bStrt = False ' Flag to record if we start Excel, so we can close it later.</span></p>	
+	
+<p class="c1"><span class="c2">bOpen = False ' Flag to record if we open the workbook, so we can close it later.</span></p>	
+	
+<p class="c1"><span class="c2">bSht = False ' Flag to record if our worksheet exists.</span></p>	
+	
+<p class="c1"><span class="c2">' Is Excel is already running?</span></p>	
+	
+<p class="c1"><span class="c2">On Error Resume Next</span></p>	
+	
+<p class="c1"><span class="c2">Set xlApp = GetObject(, "Excel.Application")</span></p>	
+	
+<p class="c1"><span class="c2">' Start Excel if it isn't running</span></p>	
+	
+<p class="c1"><span class="c2">If xlApp Is Nothing Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Set xlApp = CreateObject("Excel.Application")</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;If xlApp Is Nothing Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;MsgBox "Can't start Excel.", vbExclamation</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Exit Sub</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;' Record that we've started Excel.</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;bStrt = True</span></p>	
+	
+<p class="c1"><span class="c2">End If</span></p>	
+	
+<p class="c1"><span class="c2">On Error GoTo 0</span></p>	
+	
+<p class="c1"><span class="c2">With xlApp</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;' Hide our Excel session if we started it</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;If bStrt = True Then .Visible = False</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;' Check if the workbook is open.</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;For Each xlWkBk In .Workbooks</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If xlWkBk.FullName = StrWkBkNm Then ' The current user has it open</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set xlWkBk = xlWkBk</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bOpen = True</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit For</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Next</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;' If not open by the current user.</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;If bOpen = False Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;' The file is available, so open it.</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set xlWkBk = .Workbooks.Open(FileName:=StrWkBkNm)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If xlWkBk Is Nothing Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox "Cannot open:" &amp; vbCr &amp; StrWkBkNm, vbExclamation</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoTo ErrExit</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;' Does our worksheet exist?</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;With xlWkBk</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For i = 1 To .Sheets.Count</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If .Sheets(i).Name = StrWkSht Then bSht = True</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit For</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;End With</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;If bSht = False Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;MsgBox "Cannot find the worksheet named: '" &amp; StrWkSht &amp; "' in:" &amp; vbCr &amp; StrWkBkNm, vbExclamation</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;GoTo ErrExit</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">End With</span></p>	
+	
+<p class="c1"><span class="c2">'Set a reference to our worksheet</span></p>	
+	
+<p class="c1"><span class="c2">Set xlWkSht = xlWkBk.Sheets(StrWkSht)</span></p><br>	
+	
+<p class="c1"><span class="c2">With xlWkSht</span></p>	
+	
+<p class="c1"><span class="c2">' Process the Excel workbook</span></p>	
+	
+<p class="c1"><span class="c2">End With</span></p>	
+	
+<p class="c1"><span class="c2">With ActiveDocument</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;' Process the document</span></p>	
+	
+<p class="c1"><span class="c2">End With</span></p><br>	
+	
+<p class="c1"><span class="c2">MsgBox "Finished!", vbInformation</span></p>	
+	
+<p class="c1"><span class="c2">ErrExit:</span></p>	
+	
+<p class="c1"><span class="c2">If Not xlWkBk Is Nothing Then If bOpen = False Then xlWkBk.Close</span></p>	
+	
+<p class="c1"><span class="c2">If Not xlApp Is Nothing Then If bStrt = True Then xlApp.Quit</span></p>	
+	
+<p class="c1"><span class="c2">Set xlWkSht = Nothing: Set xlWkBk = Nothing: Set xlApp = Nothing</span></p>	
+	
+<p class="c1"><span class="c2">Application.ScreenUpdating = True</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<p class="c1"><span class="c2">Function IsFileLocked(strFileName As String) As Boolean</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;On Error Resume Next</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Open strFileName For Binary Access Read Write Lock Read Write As #1</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Close #1</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;IsFileLocked = Err.Number</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Err.Clear</span></p>	
+	
+<p class="c1"><span class="c2">End Function</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="52">Outlook VBA - Move items based on subject to another folder</a></span></p>	
+	
+<p class="c1"><span class="c2">Sub MoveItems_RobecoOne()</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Dim myInbox As Outlook.Folder</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Dim myDestFolder As Outlook.Folder</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Dim myItems As Outlook.Items</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Dim myItem As Object</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Set myInbox = Session.GetDefaultFolder(olFolderInbox)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Set myDestFolder = myInbox.Folders("b-Robeco One")</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Set myItems = myInbox.Items</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Set myItem = myItems.Find("[Subject] = 'Uw maandelijkse incasso is succesvol bijgeschreven'")</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;While TypeName(myItem) &lt;&gt; "Nothing"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;myItem.Move myDestFolder</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set myItem = myItems.FindNext</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;Wend</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="53">Outlook VBA move email to different folder</a></span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://www.experts-exchange.com/questions/28908208/Outlook-VBA-move-email-to-different-folder.html" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://www.experts-exchange.com/questions/28908208/Outlook-VBA-move-email-to-different-folder.html</span></a></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="54">Outlook VBA - Copy email to the clipboard with Outlook VBA - Stack Overflow</a></span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://stackoverflow.com/questions/3949918/copy-email-to-the-clipboard-with-outlook-vba" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://stackoverflow.com/questions/3949918/copy-email-to-the-clipboard-with-outlook-vba</span></a></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="55">Outlook VBA - Tips: Using VBA to Manage Your Outlook Email Attachments</a></span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://www.fontstuff.com/outlook/oltut01.htm" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://www.fontstuff.com/outlook/oltut01.htm</span></a></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="56">Save a workbook with an incrementing Version Number</a></span></p>	
+	
+<p class="c1"><span class="c2">Option Explicit</span></p>	
+	
+<p class="c1"><span class="c2">Sub Increment()</span></p>	
+	
+<p class="c1"><span class="c2">Dim pth As String</span></p>	
+	
+<p class="c1"><span class="c2">pth = "C:\AAA\"</span></p>	
+	
+<p class="c1"><span class="c2">ActiveWorkbook.SaveAs pth &amp; FCount(pth, ActiveWorkbook.Name)</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<p class="c1"><span class="c2">Function FCount(pth As String, fname As String)</span></p>	
+	
+<p class="c1"><span class="c2">fname = Split(fname, "-v")(0)</span></p>	
+	
+<p class="c1"><span class="c2">With Application.FileSearch</span></p>	
+	
+<p class="c1"><span class="c2">.NewSearch</span></p>	
+	
+<p class="c1"><span class="c2">.LookIn = pth</span></p>	
+	
+<p class="c1"><span class="c2">.Filename = fname</span></p>	
+	
+<p class="c1"><span class="c2">.FileType = msoFileTypeExcelWorkbooks</span></p>	
+	
+<p class="c1"><span class="c2">If .Execute() &gt; 0 Then</span></p>	
+	
+<p class="c1"><span class="c2">FCount = fname &amp; "-v" &amp; .FoundFiles.Count + 1</span></p>	
+	
+<p class="c1"><span class="c2">End If</span></p>	
+	
+<p class="c1"><span class="c2">End With</span></p>	
+	
+<p class="c1"><span class="c2">End Function</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="57">Run Excel Macro Without Opening Excel - </a></span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://wellsr.com/vba/2015/excel/run-macro-without-opening-excel-using-vbscript/" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://wellsr.com/vba/2015/excel/run-macro-without-opening-excel-using-vbscript/</span></a></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="58">3 Ways to Call a Private Sub from Another Module - </a></span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://wellsr.com/vba/2015/excel/3-ways-to-call-a-private-sub-from-another-module/" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://wellsr.com/vba/2015/excel/3-ways-to-call-a-private-sub-from-another-module/</span></a></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="59">IfError in VlookUp formula</a></span></p>	
+	
+<p class="c1"><span class="c2">How to place ifError in this VLookup formula?</span></p><br>	
+	
+<p class="c1"><span class="c2">Dim vReturnVal As Variant vReturnVal = Application.VLookup(CLng(SerieTextBox.Value), Sheets("RecordPrint").Range("B:C"), 2, False) If Not IsError(vReturnVal) Then Cells(emptyRow, 5).Value = vReturnVal Else 'Do something else End If</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="60">Alternative for multiple or conditions</a></span></p>	
+	
+<p class="c1"><span class="c2">Stel dat in cel A1 t/m A8 de volgende fruittyppes staan genoemd. Het macrotje geeft een melding als een bepaalde fruittype genoemd is in elk cel.</span></p>	
+	
+<p class="c1"><span class="c2">papaja</span></p>	
+	
+<p class="c1"><span class="c2">sinaasappel</span></p>	
+	
+<p class="c1"><span class="c2">citroen</span></p>	
+	
+<p class="c1"><span class="c2">passievrucht</span></p>	
+	
+<p class="c1"><span class="c2">appel</span></p>	
+	
+<p class="c1"><span class="c2">peer</span></p>	
+	
+<p class="c1"><span class="c2">kiwi</span></p>	
+	
+<p class="c1"><span class="c2">perzik</span></p><br>	
+	
+<p class="c1"><span class="c2">Sub Alternative_for_multiple_OR()</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Dim RefCel As Range</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Set RefCel = Range("A1")</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;For i = 1 To 8</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Select Case RefCel.Value</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case "papaja", "sinaasappel", "citroen", "passievrucht", "appel", "peer", "kiwi", "perzik"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox RefCel.Value</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End Select</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set RefCel = RefCel.Offset(1, 0)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Next i</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="61">Mozard documentenlijst als html opslaan</a></span></p>	
+	
+<p class="c1"><span class="c2">Om een documentenlijst als een html bestand op te slaan</span></p>	
+	
+<p class="c1"><span class="c2">- eerst in Internet Explorer opslaan als een Webarchief, enkel bestand (*.mht)</span></p>	
+	
+<p class="c1"><span class="c2">- het mht bestand in IE openen en opslaan als Webpagina, alleen HTML (*.htm;*html)</span></p>	
+	
+<p class="c1"><span class="c2">- Daarna kan je hem ook in adere browsers openen zoals Chrome</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="62">Using named range in VBA function for VLOOKUP</a></span></p>	
+	
+<p class="c1"><span class="c2">Bron: </span><a href="https://stackoverflow.com/questions/23503763/using-named-range-in-vba-function-for-vlookup" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://stackoverflow.com/questions/23503763/using-named-range-in-vba-function-for-vlookup</span></a><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">, (zelf iets aangepast)</span></p><br>	
+	
+<p class="c1"><span class="c2">Assume that you have the following on your worksheet:</span></p><br>	
+	
+<p class="c1"><span class="c2">A cell that shows a currency [in A1]</span></p>	
+	
+<p class="c1"><span class="c2">A range of cells (two columns, one for the currency, and the other for a corresponding commission percentage) [defined as/named RANGE, and scoped to the worksheet]</span></p>	
+	
+<p class="c1"><span class="c2">A cell that [is trying] to determine the calculated commission percentage based on A1 and RANGE</span></p><br><br>	
+	
+<p class="c1"><span class="c2">You can use:</span></p>	
+	
+<p class="c1"><span class="c2">LookupValue = 3</span></p>	
+	
+<p class="c1"><span class="c2">LookupRange = Range("A1:B100")</span></p>	
+	
+<p class="c1"><span class="c2">myCalculate = Application.VLookup(LookupValue, LookupRange, 2, False)</span></p><br>	
+	
+<p class="c1"><span class="c2">but you can NOT use:</span></p>	
+	
+<p class="c1"><span class="c2">LookupValue = 3</span></p>	
+	
+<p class="c1"><span class="c2">LookupRange = Range("A1:B100")</span></p>	
+	
+<p class="c1"><span class="c2">myCalculate = [VLOOKUP(LookupValue, LookupRange, 2, False)]</span></p><br>	
+	
+<p class="c1"><span class="c2">If FALSE an exact match is returned otherwise an error Will occure!</span></p>	
+	
+<p class="c1"><span class="c2">If TRUE or omitted, an exact or approximate match is returned. If an exact match is not found, the next largest value that is less than lookup_value is returned. The values in the first column of table_array must be placed in ascending sort order; otherwise, VLOOKUP may not give the correct value. You can put the values in ascending order by choosing the Sort command from the Data menu and selecting Ascending.</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="63">Aan textboxen macros toekennen</a></span></p>	
+	
+<p class="c1"><span class="c2">[Kopie uit: F:\1-Intern\backups 01-Interne projecten\backup4-01-Interne projecten - kopie.xlsm]</span></p><br>	
+	
+<p class="c1"><span class="c2">Sub A001_Aan_Texboxen_macros_toekennen()</span></p><br>	
+	
+<p class="c1"><span class="c2">Dim sShapes As Shape, lLoop As Long</span></p><br>	
+	
+<p class="c1"><span class="c2">Dim wsStart As Worksheet, WsNew As Worksheet</span></p><br>	
+	
+<p class="c1"><span class="c2">Call TabbladNaamAanpassen</span></p><br>	
+	
+<p class="c1"><span class="c2">Set wsStart = ActiveSheet</span></p><br>	
+	
+<p class="c1"><span class="c2">wsStart.Select</span></p><br>	
+	
+<p class="c1"><span class="c2">For Each sShapes In wsStart.Shapes</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;With sShapes</span></p><br>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If sShapes.Name Like "Drop Down *" Or Left(sShapes.Name, 7) = "Comment" = False Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Select</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txbxNaam = .Name</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtbxText = .TextFrame.Characters.Text</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Case txtbxText</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case "Hyperlink"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.OnAction = "A01_KoppelLink"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case "Hyperlinks va actieve cell bijwerken"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.OnAction = "A02_AlleHyperkinks_va_activecel_Bijwerken"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case "Openen"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.OnAction = "A03_HyperlinkKolomM_openen"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case "Filters_uitzetten"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.OnAction = "My_filter0_AllesZichtbaar"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.Width = 93</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.Height = 19.5</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case "show"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.OnAction = "My_filter1_alleenSelectie"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case "hide"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.OnAction = "My_filter2_verbergSelectie"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case "Map"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selection.OnAction = "B04_MapVerkenner"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End Select</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End With</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">Next sShapes</span></p><br>	
+	
+<p class="c1"><span class="c2">Range("C1:F50").Select</span></p>	
+	
+<p class="c1"><span class="c2">With Selection</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;.ColumnWidth = 15</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;.HorizontalAlignment = xlCenter</span></p>	
+	
+<p class="c1"><span class="c2">End With</span></p><br>	
+	
+<p class="c1"><span class="c2">Range("G1:H50").Select</span></p>	
+	
+<p class="c1"><span class="c2">With Selection</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;.WrapText = False</span></p>	
+	
+<p class="c1"><span class="c2">End With</span></p>	
+	
+<p class="c1"><span class="c2">Range("A1").Select</span></p><br>	
+	
+<p class="c1"><span class="c2">Range("N3").Select</span></p>	
+	
+<p class="c1"><span class="c2">Call A02_AlleHyperkinks_va_activecel_Bijwerken</span></p>	
+	
+<p class="c1"><span class="c2">'</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="64">Remove all macro's</a></span></p>	
+	
+<p class="c1"><span class="c2">Sub DeleteAllCode()</span></p><br>	
+	
+<p class="c1"><span class="c2">'Trust Access To Visual Basics Project must be enabled.</span></p>	
+	
+<p class="c1"><span class="c2">'From Excel: Tools | Macro | Security | Trusted Sources</span></p><br>	
+	
+<p class="c1"><span class="c2">Dim x As Integer</span></p>	
+	
+<p class="c1"><span class="c2">Dim Proceed As VbMsgBoxResult</span></p>	
+	
+<p class="c1"><span class="c2">Dim Prompt As String</span></p>	
+	
+<p class="c1"><span class="c2">Dim Title As String</span></p><br>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Prompt = "Are you certain that you want to delete all the VBA Code from " &amp; _</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ActiveWorkbook.Name &amp; "?"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Title = "Verify Procedure"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Proceed = MsgBox(Prompt, vbYesNo + vbQuestion, Title)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;If Proceed = vbNo Then</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox "Procedure Canceled", vbInformation, "Procedure Aborted"</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Sub</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End If</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;On Error Resume Next</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;With ActiveWorkbook.VBProject</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For x = .VBComponents.Count To 1 Step -1</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Case .VBComponents(x).Type</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case 1, 2, 3 'standard module, class module, and userform</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.VBComponents.Remove .VBComponents(x)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End Select</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next x</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For x = .VBComponents.Count To 1 Step -1</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.VBComponents(x).CodeModule.DeleteLines _</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1, .VBComponents(x).CodeModule.CountOfLines</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next x</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;End With</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="65">EXCEL - Werkmap beveiligen, tabbladen beveiligen</a></span></p>	
+	
+<p class="c1"><span class="c2">Als u wilt voorkomen dat andere gebruikers verborgen werkbladen weergeven, toevoegen, verplaatsen, verwijderen, of werkbladen verbergen en de naam van werkbladen wijzigen, kunt u de structuur van uw Excel-werkmap beveiligen met een wachtwoord.</span></p><br>	
+	
+<p class="c1"><span class="c2">Als u de structuur van uw werkmap wilt beschermen, voert u de volgende stappen uit:</span></p><br>	
+	
+<p class="c1"><span class="c2">Klik op Controleren &gt; Werkmap beveiligen.</span></p><br>	
+	
+<p class="c1"><span class="c2">---------------------------------------</span></p>	
+	
+<p class="c1"><span class="c2">VBA</span></p>	
+	
+<p class="c1"><span class="c2">VBA Code To Password Protect Workbook</span></p>	
+	
+<p class="c1"><span class="c2">ActiveWorkbook.Protect Password:="test", Structure:=True, Windows:=True</span></p>	
+	
+<p class="c1"><span class="c2">(zoeken in Google: vba excel Protect workbook structure)</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="66">EXCEL - Background Colors</a></span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="http://www.excel-easy.com/vba/examples/background-colors.html" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">http://www.excel-easy.com/vba/examples/background-colors.html</span></a></p><br>	
+	
+<p class="c1"><span class="c2">1. The code line below sets the background color of cell A1 to light blue.</span></p><br>	
+	
+<p class="c1"><span class="c2">Range("A1").Interior.ColorIndex = 37</span></p><br>	
+	
+<p class="c1"><span class="c2">2. The following code line sets the background color of cell A1 to 'No Fill'.</span></p><br>	
+	
+<p class="c1"><span class="c2">Range("A1").Interior.ColorIndex = 0</span></p><br>	
+	
+<p class="c1"><span class="c2">3. If you want to know the ColorIndex number of a color, simply ask Excel VBA.</span></p><br>	
+	
+<p class="c1"><span class="c2">MsgBox Selection.Interior.ColorIndex</span></p><br>	
+	
+<p class="c1"><span class="c2">4. The ColorIndex property gives access to 56 "preset" colors. If you can't find the specific color you are looking for, use the Color property and the RGB function.</span></p><br>	
+	
+<p class="c1"><span class="c2">Range("A1").Interior.Color = RGB(255, 0, 0)</span></p>	
+	
+<p class="c1"><span class="c2">Explanation: RGB stands for Red, Green and Blue. These are the three primary colors. Each component can take on a value from 0 to 255. With this function you can make every color. RGB(255,0,0) gives the pure Red color (exact same result as above).</span></p><br>	
+	
+<p class="c1"><span class="c2">----------------------------------------------------------------</span></p>	
+	
+<p class="c1"><span class="c2">Color Palette and the 56 Excel ColorIndex Colors</span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="http://dmcritchie.mvps.org/excel/colors.htm" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">http://dmcritchie.mvps.org/excel/colors.htm</span></a></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="67">EXCEL - How to create strings containing double quotes in Excel formulas?</a></span></p>	
+	
+<p class="c1"><span class="c2">Have you tried escaping with a double-quote?</span></p><br>	
+	
+<p class="c1"><span class="c2">= "Maurice ""The Rocket"" Richard"</span></p><br>	
+	
+<p class="c1"><span class="c2">Alternatively, you can use the CHAR function:</span></p><br>	
+	
+<p class="c1"><span class="c2">= "Maurice " &amp; CHAR(34) &amp; "Rocket" &amp; CHAR(34) &amp; " Richard"</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="68">EXCEL - zoeken "identieke cellinhoud" wordt ingeschakeld</a></span></p>	
+	
+<p class="c1"><span class="c2">Excel zoeken "identieke cellinhoud" wordt ingeschakeld iedere keer bij het gebruik van het toestingsformulier, macro "Verberg rijen nvt of maak alle rijen zichtbaar". Met name bij het zichtbaar maken van alle rijen.</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="69">EXCEL - cell locked after paste - 2</a></span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="http://www.ozgrid.com/forum/showthread.php?t=90884" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">http://www.ozgrid.com/forum/showthread.php?t=90884</span></a></p><br>	
+	
+<p class="c1"><span class="c2">Right click on the sheet name tab and choose View Code. In here paste and modify the password.</span></p>	
+	
+<p class="c1"><span class="c2">VB:</span></p>	
+	
+<p class="c1"><span class="c2">Dim bLock As Boolean</span></p>	
+	
+<p class="c1"><span class="c2">Private Sub Worksheet_Change(ByVal Target As Range)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Target(1, 1).Locked = bLock</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;</span></p>	
+	
+<p class="c1"><span class="c2">Private Sub Worksheet_SelectionChange(ByVal Target As Range)</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;Me.Protect Password:="Secret", UserInterfaceOnly:=True</span></p>	
+	
+<p class="c1"><span class="c2">&nbsp;&nbsp;&nbsp;&nbsp;bLock = Target(1, 1).Locked</span></p>	
+	
+<p class="c1"><span class="c2">End Sub</span></p><br>	
+	
+<br><hr>	
+<p class="c1"><span class="c3"><a id ="70">EXCEL - alle bladen zichtbaar maken</a></span></p>	
+	
+<p class="c1"><span class="c2">Unhide all worksheets / make all worksheets visible</span></p><br>	
+	
+<p class="c1"><span class="c2">1. Druk Alt+F11 om de Visuals Basis Editor weer te geven.</span></p>	
+	
+<p class="c1"><span class="c2">2. Open Venster Direkt (Ctrl+G)</span></p>	
+	
+<p class="c1"><span class="c2">3. Type de volgende programmacode en druk op Enter, waarna de opdracht direct wordt uitgevoerd.</span></p><br>	
+	
+<p class="c1"><span class="c2">For Each s In Sheets: s.Visible = True: Next</span></p><br>	
+	
+<p class="c1"><span class="c2">______________________________________________</span></p>	
+	
+<p class="c1"><span class="c2">Bron:</span></p>	
+	
+<p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;"><a href="https://www.accountingweb.com/technology/excel/unhiding-all-worksheets-within-an-excel-workbook" style="text-decoration-line: none;"><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">https://www.accountingweb.com/technology/excel/unhiding-all-worksheets-within-an-excel-workbook</span></a></p><br>	
+	
+<p class="c1"><span class="c2">Unhiding All Worksheets Within an Excel Workbook</span></p><div><span style="font-size: 11pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>	
+	
+<br><hr>	
+	
+</body></html>
+
